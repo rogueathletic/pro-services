@@ -1,0 +1,337 @@
+
+/*======================================================== 
+Combined rule set static button
+==========================================================*/
+
+.quake-btn .schutz-button {
+    border: 2px solid var(--blue2);
+    margin-bottom: 20px;
+}
+
+.quake-btn2 .schutz-button {
+    border: 2px solid var(--white)
+}
+
+.quake-btn2:nth-of-type(-n+1) {
+    margin-left: 0;
+}
+
+
+.quake-btn .schutz-button,
+.quake-btn2 .schutz-button {
+    position: relative;
+    text-align: center;
+    min-width: 190px;
+    padding: 11px 42px 11px 42px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: sofia-pro, sans-serif;
+    line-height: 1;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    cursor: pointer;
+}
+
+.quake-btn .schutz-button {
+    margin-left: 40px;
+}
+
+
+/*======================================================== 
+Button 1 color settings
+==========================================================*/
+
+.quake-btn .schutz-button {
+    color: var(--white);
+    outline-color: var(--white);
+    background-color: transparent;
+}
+
+/*======================================================== 
+Button 2 color settings
+==========================================================*/
+
+.quake-btn2 .schutz-button {
+    color: var(--white);
+    outline-color: var(--white);
+    background-color: transparent;
+}
+
+
+/*======================================================== 
+Adds weight to the text in button when hovered
+==========================================================*/
+
+
+.quake-btn .schutz-button:hover,
+.quake-btn2 .schutz-button:hover,
+.quake-btn .schutz-button:active,
+.quake-btn2 .schutz-button:active {
+    -webkit-text-stroke: 0.2px;
+}
+
+
+/*======================================================== 
+Controls animation hidden when button is clicked
+==========================================================*/
+
+.quake-btn .schutz-button:focus:not(:active)::after,
+.quake-btn .schutz-button:active::after,
+.quake-btn .schutz-button:hover::after {
+    background-color: var(--blue1);
+}
+
+.quake-btn2 .schutz-button:focus:not(:active)::after,
+.quake-btn2 .schutz-button:active::after,
+.quake-btn2 .schutz-button:hover::after {
+
+    background-color: var(--lightGrey);
+}
+
+.quake-btn  .schutz-button:focus:not(:active)::after,
+.quake-btn2 .schutz-button:focus:not(:active)::after,
+.quake-btn  .schutz-button:active::after,
+.quake-btn2 .schutz-button:active::after {
+    -webkit-animation: quake 1s;
+    animation: quake 1s;
+}
+
+.quake-btn  .schutz-button:hover::after,
+.quake-btn2 .schutz-button:hover::after {
+    -webkit-animation: quake-hover 1s;
+    animation: quake-hover 1s;
+}
+
+
+.quake-btn  .schutz-button:focus:not(:active)::after,
+.quake-btn2 .schutz-button:focus:not(:active)::after,
+.quake-btn  .schutz-button:active::after,
+.quake-btn2 .schutz-button:active::after,
+.quake-btn  .schutz-button:hover::after,
+.quake-btn2 .schutz-button:hover::after {
+    display: none;
+    position: absolute;
+    content: "";
+    border-radius: 300px;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
+    top: 50%;
+    left: 50%;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+}
+
+/*======================================================== 
+Start to finish animation rules
+==========================================================*/
+@media only screen and (min-width: 1025px) {
+
+    .quake-btn .schutz-button:focus:not(:active)::after,
+    .quake-btn .schutz-button:active::after,
+    .quake-btn2 .schutz-button:focus:not(:active)::after,
+    .quake-btn2 .schutz-button:active::after,
+    .quake-btn .schutz-button:hover::after,
+    .quake-btn2 .schutz-button:hover::after {
+        display: block;
+    }
+
+    .quake-btn .schutz-button:focus:not(:active)::after,
+    .quake-btn .schutz-button:active::after,
+    .quake-btn2 .schutz-button:focus:not(:active)::after,
+    .quake-btn2 .schutz-button:active::after {
+        -webkit-animation: quake 1s;
+        animation: quake 1s;
+    }
+
+    .quake-btn .schutz-button:hover::after,
+    .quake-btn2 .schutz-button:hover::after {
+        -webkit-animation: quake-hover 1s;
+        animation: quake-hover 1s;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .quake-btn .schutz-button:active::after,
+    .quake-btn .schutz-button:hover::after,
+    .quake-btn2 .schutz-button:active::after,
+    .quake-btn2 .schutz-button:hover::after {
+        display: block;
+        -webkit-animation: 1s quake-mobile;
+        animation: 1s quake-mobile;
+    }
+}
+
+/*===================================================
+Desktop Animations
+===================================================*/
+
+@-webkit-keyframes quake-hover {
+    from {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+        filter: alpha(opacity=1);
+        -moz-opacity: 1;
+        -khtml-opacity: 1;
+        opacity: 1;
+        -webkit-transform: scale(2);
+        -ms-transform: scale(2);
+        transform: scale(2);
+    }
+
+    to {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        -moz-opacity: 0;
+        -khtml-opacity: 0;
+        opacity: 0;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        border-radius: 300px;
+    }
+}
+
+
+@keyframes quake-hover {
+    from {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+        filter: alpha(opacity=1);
+        -moz-opacity: 1;
+        -khtml-opacity: 1;
+        opacity: 1;
+        -webkit-transform: scale(2);
+        -ms-transform: scale(2);
+        transform: scale(2);
+    }
+
+    to {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        -moz-opacity: 0;
+        -khtml-opacity: 0;
+        opacity: 0;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        border-radius: 300px;
+    }
+}
+
+@-webkit-keyframes quake {
+    from {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+        filter: alpha(opacity=1);
+        -moz-opacity: 1;
+        -khtml-opacity: 1;
+        opacity: 1;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+    }
+
+    to {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        -moz-opacity: 0;
+        -khtml-opacity: 0;
+        opacity: 0;
+        -webkit-transform: scale(10);
+        -ms-transform: scale(10);
+        transform: scale(10);
+        border-radius: 300px;
+        border-radius: 300px;
+    }
+}
+
+@keyframes quake {
+    from {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+        filter: alpha(opacity=1);
+        -moz-opacity: 1;
+        -khtml-opacity: 1;
+        opacity: 1;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+    }
+
+    to {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        -moz-opacity: 0;
+        -khtml-opacity: 0;
+        opacity: 0;
+        -webkit-transform: scale(10);
+        -ms-transform: scale(10);
+        transform: scale(10);
+        border-radius: 300px;
+        border-radius: 300px;
+    }
+}
+
+
+/*===================================================
+Mobile Animations
+===================================================*/
+
+@keyframes quake-mobile {
+    from {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+        filter: alpha(opacity=1);
+        -moz-opacity: 1;
+        -khtml-opacity: 1;
+        opacity: 1;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+    }
+
+    to {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        -moz-opacity: 0;
+        -khtml-opacity: 0;
+        opacity: 0;
+        -webkit-transform: scale(6);
+        -ms-transform: scale(6);
+        transform: scale(6);
+        border-radius: 300px;
+        border-radius: 300px;
+    }
+}
+
+@-webkit-keyframes quake-mobile {
+    from {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+        filter: alpha(opacity=1);
+        -moz-opacity: 1;
+        -khtml-opacity: 1;
+        opacity: 1;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+    }
+
+    to {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        -moz-opacity: 0;
+        -khtml-opacity: 0;
+        opacity: 0;
+        -webkit-transform: scale(6);
+        -ms-transform: scale(6);
+        transform: scale(6);
+        border-radius: 300px;
+    }
+}
