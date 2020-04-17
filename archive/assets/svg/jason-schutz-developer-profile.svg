@@ -1,14 +1,1 @@
-<svg class="onlyProfileImg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 758 758" width="300">
-<defs> <radialGradient id="freshWaterDrop" x1="50%" y1="0%" x2="50%" y2="100%">
-	<stop offset="0%" stop-color="#004B87">
-	<animate attributeName="stop-color" values="#004B87; #61DAFB; #004B87" dur="5555ms" repeatCount="indefinite" />
-	</stop>
-	<stop offset="100%" stop-color="#61DAFB">
-	<animate attributeName="stop-color" values="#61DAFB; #004B87; #61DAFB" dur="5555ms" repeatCount="indefinite" />
-	</stop>
-</radialGradient>
-</defs>
-<circle fill="url(#freshWaterDrop)"  cx="379" cy="379" r="379"/>
-<image style="overflow:visible;" width="600" height="663" xlink:href="../png/jason-schutz-developer-profile.png"  transform="matrix(1 0 0 1 66.0018 95.0002)">
-</image>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" class="onlyProfileImg" viewBox="0 0 758 758"><defs><radialGradient id="freshWaterDrop" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#004B87"><animate attributeName="stop-color" dur="5555ms" repeatCount="indefinite" values="#004B87; #61DAFB; #004B87"/></stop><stop offset="100%" stop-color="#61DAFB"><animate attributeName="stop-color" dur="5555ms" repeatCount="indefinite" values="#61DAFB; #004B87; #61DAFB"/></stop></radialGradient></defs><circle cx="379" cy="379" r="379" fill="url(#freshWaterDrop)"/><image style="overflow:visible" width="600" height="663" transform="matrix(1 0 0 1 66.0018 95.0002)" xlink:href="../png/jason-schutz-developer-profile.png"/></svg>
